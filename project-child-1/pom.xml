@@ -24,12 +24,6 @@
         <artifactId>maven-resources-plugin</artifactId>
       </plugin>
 
-      <!-- unpack zip dependencies and put them in target directory -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-      </plugin>
-
       <!-- npm install / npm run build : exec commands -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
