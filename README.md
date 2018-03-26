@@ -1,3 +1,5 @@
+## How to use ?
+
 - launch nexus on docker
 
 `docker run -d -p 8081:8081 --name nexus sonatype/nexus3`
@@ -37,4 +39,10 @@
 
 `cd project-child-2 && mvn clean deploy`
 
-## What is the problem
+## What is the problem ?
+
+There are two assembly descriptor files `ng-build.xml` and `ng-src.xml` in the `project-assembly` folder.
+These assembly files are set up to zip respectively the `dist` and `src` folder when they are inside the `target` directory.
+Thus, the first task of the `project-parent` is to copy source files into `target` to use those assembly files.
+Is there a way to parameterize this working directory to avoid the copy task and run the assembly files where the pom child wants ?
+For example a configuration with a `${working.directory}`.
